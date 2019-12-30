@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Form</title>
+<script>
+function validate()
+{
+	//alert("validate called")
+	var username=document.getElementById("username").value;
+	var spouse=document.getElementById("spouseName").value;
+	var ifmale = document.getElementById("male").checked;
+	var iffemale = document.getElementById("female").checked;
+	var ifliked = document.getElementById("Like").checked;
+	var ifnotliked = document.getElementById("Don't Like").checked;
+	if(username.length==0){
+		alert ("Please enter your username");
+	} 
+	else
+{       usernameerror=document.getElementById("usernameerror");
+	usernameerror.innerHTML="Name : "+username;
+	 if(spouse.length==0)
+	{
+	alert ("Please enter your spouse's name");
+	} 
+	else {
+	var gender = document.getElementsByName('gendererror');
+	 if (ifmale == true)
+	{
+	
+	gendererror.innerHTML="Your Gender is : Male";
+	
+	}
+	 else if (ifmale == null)
+	{
+	alert("You haven't chosen gender!")
+	} 
+	else if (iffemale == true)
+	{
+	var gender = document.getElementsByName('gendererror');
+	gendererror.innerHTML="Your Gender is : Female ";
+	
+	}
+	 else
+	
+	{
+	alert("You haven't chosen gender!")
+	} 
+	 if (ifliked == true)
+	{ commentserror=document.getElementById("commentserror");
+	
+	commentserror.innerHTML="Your comment is : liked! "; 
+	}
+	 else if (ifliked == null)
+	{
+	alert("You haven't chosen comments!")
+	} 
+	else if (ifnotliked == true)
+	{
+	
+	commentserror.innerHTML="Your comment is : not liked! "; 
+	}
+	 else
+	{
+	alert("You haven't chosen comments!")
+	} 
+}
+}
+}
+</script>
+</head>
+<body>
+ <form>
+      <table cellspacing="10" cellpadding="10" align="center" border="2">
+      <caption><h2>LOGIN FORM</h2></caption>
+
+     <tr>
+        <td>Username</td>
+        <td><input type="text" name= "username" id="username"></td>
+    </tr>
+   	< <tr>
+        <td>Spouse Name</td>
+        <td><input type="text" name= "spouseName" id="spouseName"></td>
+    </tr>
+	<tr>
+	<td>Gender</td>
+	<td><input type="radio" value= "Male" name="Gender" id="male" ></td>
+	<td><input type="radio" value= "Female" name="Gender" id="female" ></td>
+ </tr>
+<tr>
+	<td>Comments</td>
+	<td rowspan = "2"> <input type="radio" value= "Like" name="comment" id="Like" ></td>
+	<td rowspan = "2"><input type="radio" value= "Don't Like" name="comment" id="Don't Like" ></td>
+ </tr>
+<tr>
+</tr>
+<tdolspan = "3"></td>
+    <td colspan = "3" align = "center" ><input centre type="button" value= "Submit" onclick="validate()" ></td>
+</tr>
+</tr>
+ <tr>
+    <td colspan="3"><div id="usernameerror"></div></td>
+   
+   </tr>
+</tr>
+</tr>
+ <tr>
+    <td colspan="3" ><div id="gendererror"></div></td>
+   </tr>
+</tr>
+ <tr>
+    <td colspan="3" ><div id="commentserror"></div></td>
+   </tr>
+</table>
+</form>
+</body>
+</html>
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
