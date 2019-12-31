@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script>
+var today = new Date();
+var lastdate = new Date();
+var thisdate = today.getDate();
+lastdate.setFullYear(2020, 0, 15)//1st Jan 2020
+bill = prompt("Enter your initial bill amount: " , "1234");
+	
+if(thisdate > 15)
+{
+
+	var day = 1000*60*60*24;
+	delay = ((lastdate-today)/day)-1
+	newbill = parseInt(bill) + parseInt(50*delay) 
+	alert("today is" + delay)
+	alert("Your total bill is: " + newbill);
+	
+}	
+else {
+	alert("Your total bill is: " + bill);
+}
+</script>
+</body>
+</html>

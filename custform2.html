@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script>
+
+
+function validate()
+{
+	
+	
+	//alert("Validate called!")
+	var customerid = document.getElementById("customerid").value;
+	var customername = document.getElementById("customername").value;
+	var customeraddress = document.getElementById("customeraddress").value;
+	var billamount = document.getElementById("billamount").value;
+	
+	
+	
+	
+	if(customerid.length!=5)
+	{	
+		var custid = document.getElementById("myspan1");
+		custid.innerHTML = "<font color=red> Customer ID should be 5 digits</font>"	
+	}
+	
+	else if(customername.length ==0 )
+	{
+		var custl = document.getElementById("myspan11");
+		custid.innerHTML=" "
+		custl.innerHTML = "<font color=red> Please enter customer name</font>"		
+	}
+	else if(customeraddress.length ==0 )
+	{
+		var custn = document.getElementById("myspan22");
+		custn.innerHTML = "<font color=red> Please enter customer address</font>"		
+	}
+	else if((customeraddress != 'Pune') || (customeraddress != 'Mumbai') || (customeraddress != 'Delhi'))
+		{
+		var custadd = document.getElementById("myspan2");
+		custadd.innerHTML = "<font color=red> Invalid Customer address</font>"			
+		}
+	else if(billamount.length ==0 )
+	{
+		var bille = document.getElementById("myspan33");
+		bille.innerHTML = "<font color=red> Please enter bill amount</font>"		
+	}
+	else if(billamount < 0)
+		{
+		var bill = document.getElementById("myspan3");
+		bill.innerHTML = "<font color=red> Enter valid amount</font>"			
+		}
+	else
+		{
+		alert("Welcome " +customername)
+		}
+}
+
+
+
+
+</script>
+
+
+
+
+
+	<form>
+	<h2>Customer form</h2>
+	<table cellspacing = "10" cellpadding="10" align="centre">
+	<tr>
+	<td>Customer ID:</td>
+	<td> <input type="text" name ="customerid" id ="customerid" required/></td><br/>
+	<td> <span id = "myspan1"></span> </td>
+		</tr>
+		<tr>
+	<td>Customer Name:</td>
+	<td><input type="text" name ="cusomtername" id ="customername" required/></td>
+	<td> <span id = "myspan11"></span> </td>
+	</tr>
+			</tr>
+	<td>Customer Address:</td>
+	<td><input type="text" name ="cusomteraddress" id ="customeraddress" required/></td>
+	<td> <span id = "myspan2"></span> </td>
+	<td> <span id = "myspan22"></span> </td>
+	</tr>
+			</tr>
+	<td>Billamount:</td>
+	<td><input type="text" name ="billamount" id ="billamount" required/></td>
+	<td> <span id = "myspan33"></span> </td>
+	<td> <span id = "myspan3"></span> </td>
+	</tr>
+	<tr>
+	<td><input type = "button" value = "Go" onclick="display()"></td>
+		<td><input type = "button" value = "Check" onclick="validate()"></td>
+	<td><input type = "reset" value = "Clear"></td>
+	</tr>
+	</form>
+	</table>
+</body>
+</html>

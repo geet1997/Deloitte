@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<script>
+function change(){
+	var myspa1 = document.getElementById("myspan1");
+	var mydiv1 = document.getElementById("mydiv1");
+	myspa1.innerHTML = "<font color = blue>Welcome</font>"
+		mydiv1.innerHTML = "<font color = red>Welcome div</font>"
+	
+	
+	
+	
+	
+}
+
+
+
+
+function validate()
+{
+	//alert("Validate called!")
+	var uname = document.getElementById("username").value;
+	if(uname.length==0){
+		
+		alert("Please Enter Username!")
+		
+	}
+	else {
+	var pass = document.getElementById("password").value;
+	var confirmpass = document.getElementById("confirmPassword").value;
+	if(pass.length<6){
+		alert("Password should be minimum 6 characters")
+		
+	}
+	
+	else if (pass =! confirmpass)
+		{
+		alert("Passwords should match!")
+		}
+	
+else{
+		
+		alert("Welcome " + uname)
+}
+	}
+	
+	
+	}
+
+
+
+
+
+
+</script>
+<span id= "myspan1"> Span1</span><span>Span2</span>
+<div id= "mydiv1">Div1</div><div>Div2</div>
+<body>
+<form>
+<h2>Login Form</h2>
+<table cellspacing="10" cellpadding="10" allign="center">
+<tr>
+<td>User Name</td>
+<td> <input type = "text" name="username" id= "username" ></td>
+</tr>
+<tr>
+<td>Password</td>
+<td> <input type = "password" name="password" id= "password" ></td>
+<tr>
+<td>Confirm Password</td>
+<td> <input type = "password" name="confirmPassword" id= "confirmPassword" ></td>
+</tr>
+</tr>
+<tr>
+<td><input type = "submit" value = "Go"></td>
+<td><input type = "button" value = "Click" onclick="validate()";></td>
+<td><input type = "button" value = "Change" onclick="change()";></td>
+<td><input type = "reset" value = "Clear"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

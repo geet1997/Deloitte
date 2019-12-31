@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Customer Form</title>
+</head>
+<body>
+<form>
+<h2>Patient Details</h2>
+<table cellspacing="10" cellpadding="10" allign="center">
+
+<td>Patient Name</td>
+<td> <input type = "text" name="customerName" id= "customerName" ></td>
+</tr>
+
+<tr>
+<td>Patient Address</td>
+<td><textarea  name="patientAddress" id= "patientAddress"
+rows = "5" cols = "10"></textarea></td>
+</tr>
+
+<tr>
+<td>Gender</td>
+<td> <input type = "radio" name="gender" value= male id= "male">Male
+<input type = "radio" name="gender" value = female id= "female">Female
+<input type = "radio" name="gender" value = others id= "others">Others </td>
+</tr>
+<tr>
+<td>Blood Group</td>
+<td> <input type = "radio" name="bg" value= A+ id= "bg1">A+
+<input type = "radio" name="bg" value = B+ id= "bg2">B+
+<input type = "radio" name="bg" value = O+ id= "bg3">O+ </td>
+<tr>
+<tr>
+<td>Notification</td>
+<td> <input type = "checkbox" name="not" value= ByEmail id= "not">ByEmail
+<input type = "checkbox" name="not" value = ByPhone id= "not">ByPhone
+<input type = "checkbox" name="not" value = ByWhatsapp id= "not">ByWhatsapp </td>
+<tr>
+<td>Department</td>
+<td> 
+<select name = "department" id="department">
+<option value = "as"></option>option>
+<option value = "Neuro">Neuro</option>option>
+<option value = "Cardio">Cardio</option>option>
+<option value = "ENT">ENT</option>option>
+<option value = "Gynae">Gynae</option>option>
+</select>
+ </td>
+<tr>
+<td><input type = "submit" value = "Admit"></td>
+
+<td><input type = "reset" value = "Clear"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

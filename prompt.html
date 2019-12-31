@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<script>function promptdemo()
+{
+ name = prompt("Enter your full name: ","enterhere");
+ n = name.split(" ");
+ 
+  Istrue = confirm ("Do you wish to continue?");
+if (Istrue==true)
+	{
+	alert("Welcome " + n[0][0] +" " +  n[1])
+	}
+	else
+	{
+	alert ("Thank you " + name)
+}
+
+}
+</script>
+<script>
+promptdemo();
+</script>
+</body>
+</html>

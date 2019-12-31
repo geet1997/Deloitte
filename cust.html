@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Customer</title>
+<script type="text/javascript">
+function validate(){
+	var id= document.getElementById("CustomerId").value;
+	var name= document.getElementById("CustomerName").value;
+	var address= document.getElementById("CustomerAddress").value;
+	var amt= document.getElementById("BillAmount").value;
+	
+	var errId=document.getElementById("errId")
+	var errName=document.getElementById("errName")
+	var errAddr=document.getElementById("errAddr")
+	var errAmt=document.getElementById("errAmt")
+	
+	var disp=document.getElementById("display")
+	disp.innerHTML=""
+	errId.innerHTML="";
+	errName.innerHTML="";
+	errAddr.innerHTML="";
+	errAmt.innerHTML="";
+	
+	if(id.length<1){
+		errId.innerHTML="<font color=red>Please enter Customer ID</font>"
+	}
+	else if(id.length!=5){
+		errId.innerHTML="<font color=red>Customer id must be of 5 digits</font>"
+	}
+	else if(name.length<1){
+		
+		errName.innerHTML="<font color=red>Please enter Customer Name</font>"
+	}
+	else if(address.length<1){
+		
+		errAddr.innerHTML="<font color=red>Please enter Customer Address</font>"
+	}
+	else if(address!='pune'&& address!='mumbai' && address!='delhi'){
+		
+		errAddr.innerHTML="<font color=red>Please enter Customer Address as pune, mumbai or delhi</font>"
+	}
+	else if(amt.length<1){
+		
+		errAmt.innerHTML="<font color=red>Please enter Bill Amount</font>"
+	}
+	else if(parseInt(amt)<0){
+		
+		errAmt.innerHTML="<font color=red>Amount should be >0</font>"
+	}
+	else{
+		
+		disp.innerHTML="<font color=green><br/>Congrats, Your customer saved successfully</font><br/><br/>Your customer details are :<br/>Customer Id : "+id+"<br/> Customer Name : "+name+"<br/> Customer Address : "+address+"<br/> Bill Amount : "+amt 
+	}
+}
+
+</script>
+</head>
+<body>
+<form>
+	<h1>Customer form</h1>
+	<table cellpadding="10">
+		<tr>
+			<td>Customer Id : </td>
+			<td><input type="text" name="CustomerId" id="CustomerId"></td>
+			<td>	<span id="errId"></span></td>
+		</tr>
+		<tr>
+			<td>Customer Name : </td>
+			<td><input type="text" name="CustomerName" id="CustomerName"></td>
+			<td><span id="errName"></span></td>
+		</tr>
+		<tr>
+			<td>Customer Address : </td>
+			<td><input type="text" name="CustomerAddress" id="CustomerAddress"></td>
+			<td><span id="errAddr"></span></td>
+		</tr>
+		<tr>
+			<td>Bill Amount : </td>
+			<td><input type="text" name="BillAmount" id="BillAmount"></td>
+			<td><span id="errAmt"></span></td>
+		</tr>
+		<tr>
+			<td align="center"><input type="submit" value="Save">
+			<input type="button" value="Validate" onclick="validate()">	
+			</td>
+			<td align="center"><input type="reset" value="clear" ></td>
+		</tr>
+	</table>
+	<div id="display"></div>
+</form>
+
+</body>
+</html>
